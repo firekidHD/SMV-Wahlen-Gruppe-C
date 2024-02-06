@@ -543,8 +543,13 @@
                 </span>
               </span>
               <div class="home-btn-group">
-                <a class="buttonFilled" href="login">Anmelden um abzustimmen</a>
-                <button class="buttonFlat">Mehr erfahren&nbsp;→</button>
+                <form action="login">
+                  <input class="buttonFilled " type="submit" value="Abstimmen"/>
+              </form>
+                <form action="register">
+                  <input class="home-login buttonFlat" type="submit" value="Wahlen Ansehen&nbsp;→"/>
+              </form>
+                  <br>
               </div>
             </div>
           </div>
@@ -792,5 +797,13 @@
       data-section-id="navbar"
       src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
     ></script>
+    <script>
+      function redirectToLoginPage() {
+        window.location.href = "login";
+      };
+      function redirectToRegisterPage() {
+        window.location.href = "register";
+      };
+    </script>
   </body>
 </html>
