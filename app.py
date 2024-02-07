@@ -51,10 +51,15 @@ def home():
 def wahlprozess():
     return render_template("wahlprozess.html")
 
+@app.route("/wahlprozess")
+def choose():
+        return render_template('choosing.html')
+    
 @app.route("/logout")
 def logout():
     session.clear()
     return redirect(url_for("index"))
+
 
 if __name__ == "__main__": 
     app.run(debug=True)
