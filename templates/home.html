@@ -462,7 +462,7 @@
             margin-bottom: 5px;
         };
     </style>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/diagramm_template.css') }}"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
 </head>
@@ -561,8 +561,16 @@
           <div class="home-hero">
             <div class="heroContainer home-hero1">
             <div class="home-container1">
-              <h1 class="home-hero-heading heading1"> Willkommen {{name}}!</h1>
               <span class="home-hero-sub-heading bodyLarge">
+                <div class="container">
+                  <h1 class="dashboard-heading"> Willkommen {{name}}!</h1>
+                  <br>
+                  <div class="dashboard">
+                    <a class="button-dashboard" href="{{url_for('wahlprozess')}}">Zu Wahlprozess</a>
+                    <a class="button-dashboard" href="#">Zu Kandiaten</a>
+                    <a class="button-dashboard" href="#">Zu Kontakt</a>
+                  </div>
+                </div>
                 <span>
                   <span>
                     <span></span>

@@ -45,7 +45,7 @@ def home():
         username = session["username"]
         return render_template("home.html", name=username)
     else:
-        return redirect(url_for("login"))
+        return redirect(url_for("index"))
     
 @app.route("/wahlprozess")
 def wahlprozess():
