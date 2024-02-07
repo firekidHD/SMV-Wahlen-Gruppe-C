@@ -36,6 +36,10 @@ def profile(username):
     else:
         return "User not found."
 
+@app.route("/wahlprozess")
+def choose():
+        return render_template('choosing.html')
+    
 
 if __name__ == "__main__": 
     app.run(debug=True)
