@@ -464,7 +464,6 @@
     </style>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}"/>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -477,15 +476,14 @@
             <span class="logo">Wahlsystem</span>
             <div data-thq="thq-navbar-nav" class="home-desktop-menu">
               <nav class="home-links">
-                <a class="home-nav12 bodySmall" href="/">Startseite</a>
+                <a class="home-nav12 bodySmall" href="{{url_for('home')}}">Startseite</a>
                 <span class="home-nav2 bodySmall">Über uns</span>
-                <span class="home-nav3 bodySmall">Wahlprozess</span>
+                <a class="home-nav3 bodySmall" href="{{url_for('wahlprozess')}}">Wahlprozess</a>
                 <span class="home-nav4 bodySmall">Kandidaten</span>
                 <span class="home-nav5 bodySmall">Kontakt</span>
               </nav>
               <div class="home-buttons">
-                <a class="home-login buttonFlat" href="login">Anmelden</a>
-                <a class="buttonFilled" href="register">Registrieren</a>
+                <a class="buttonFilled" href="{{url_for('logout')}}">Abmelden</a>
               </div>
             </div>
               <div data-thq="thq-burger-menu" class="home-burger-menu">
@@ -559,20 +557,37 @@
               </div>
             </header>
           </div>
-          div class="container">
-          <h1>User Profile</h1>
-          <div class="user-info">
-              <h2>Username: {{ user.username }}</h2>
-              <p>Email: {{ user.email }}</p>
-              <p>Bio: {{ user.bio }}</p>
-              <p>Skills:</p>
-              <ul>
-                  {% for skill in user.skills %}
-                      <li>{{ skill }}</li>
-                  {% endfor %}
-              </ul>
+          <!--CODE HERE-->
+          <div class="home-hero">
+            <div class="heroContainer home-hero1">
+            <div class="home-container1">
+              <h1 class="home-hero-heading heading1"> Willkommen {{name}}!</h1>
+              <span class="home-hero-sub-heading bodyLarge">
+                <span>
+                  <span>
+                    <span></span>
+                    <span></span>
+                  </span>
+                  <span>
+                    <span></span>
+                    <span></span>
+                  </span>
+                </span>
+                <span>
+                  <span>
+                    <span></span>
+                    <span></span>
+                  </span>
+                  <span>
+                    <span></span>
+                    <span></span>
+                  </span>
+                </span>
+              </span>
+              </div>
+            </div>
           </div>
-      </div>
+        </div>
             <!--CODE HERE-->
         <div class="home-footer">
             <footer class="footerContainer home-footer1">
