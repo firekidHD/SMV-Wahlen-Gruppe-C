@@ -486,11 +486,11 @@
 
                 <div class="register-page">
                   <div class="form">
-                    <form class="login-form">
-                      <input type="text" placeholder="name"/>
-                      <input type="password" placeholder="password"/>
-                      <input type="text" placeholder="email address"/>
-                      <button>create</button>
+                    <form action="{{ url_for('register') }}" method="get" class="login-form">
+                      <input type="text" name="username" placeholder="Username"/>
+                      <input type="password" placeholder="Password"/>
+                      <input type="text" id="email" name="email" placeholder="Email addresse"/>
+                      <input id="input_submit_button" type="submit" value="Registrieren">
                       <p class="message">Already registered? <a href="login">Sign In</a></p>
                     </form>
                   </div> 
